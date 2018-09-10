@@ -1,0 +1,26 @@
+train_net: "models/pascal_voc/ResNet-50/deformable_rfcn_end2end/deformable_train_agnostic_ohem .prototxt"
+base_lr: 0.001
+lr_policy: "step"
+gamma: 0.1
+stepsize: 80000
+
+display: 200
+
+momentum: 0.9
+weight_decay: 0.0005
+
+# We disable standard caffe solver snapshotting and implement our own snapshot
+# function
+snapshot: 2000
+
+# We still use the snapshot prefix, though
+snapshot_prefix: "deformable__resnet50_rfcn_ohem_caffemodel/resnet50_caffemodel"
+
+iter_size: 2
+# debug_info: true
+
+
+
+
+
+
